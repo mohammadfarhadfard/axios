@@ -53,7 +53,7 @@ setInterval(()=>{
 
  setInterval(()=>{
 
-   let path = `https://api.telegram.org/bot6775787608:AAF2d7l05TtGQTXL12dTyhPyKjFqr9fuIvc/sendMessage\?chat_id\=-1002136043768\&text\= BTC :${price1},TRX :${price2},ETH :${price3}`
+   let path = `https://api.telegram.org/bot6775787608:AAF2d7l05TtGQTXL12dTyhPyKjFqr9fuIvc/sendMessage\?chat_id\=-1002136043768\&text\= BTC : ${price1} , TRX :${price2} , ETH :${price3} `
 
    axios.get(path)
      .then( function(response) {

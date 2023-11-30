@@ -50,12 +50,11 @@ setInterval(()=>{
     }) 
   },2500)
 
+  // \uD83D\uDE0D
 
  setInterval(()=>{
 
-  let text = `قیمت بیتکوین : ${BTC_price}  
-                                                                                              قیمت ترون : ${TRX_price}     
-                                                                                                قیمت اتریوم : ${ETH_price}`  
+  let text =  `%0D%0A%0D%0A[BTC-USDT]%0D%0A%0D%0A▪  بیتکوین  : ${BTC_price}%0D%0A%0D%0A[TRX-USDT]%0D%0A%0D%0A▪  ترون : ${TRX_price}%0D%0A%0D%0A[ETH-USDT]%0D%0A%0D%0A▪  اتریوم : ${ETH_price}%0D%0A%0D%0A`
  
    let path = `https://api.telegram.org/bot6775787608:AAF2d7l05TtGQTXL12dTyhPyKjFqr9fuIvc/sendMessage\?chat_id\=-1002136043768\&text\= ${text}`
 
@@ -65,7 +64,7 @@ setInterval(()=>{
      .catch(error => {
       console.log("err: " +error)
      })
- },6000)
+ },10000)
 
 
 
