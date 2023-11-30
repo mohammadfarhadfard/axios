@@ -18,7 +18,7 @@ setInterval(()=>{
     .catch(error => {
      console.log("err: " +error)
     }) 
-},2500)
+  },2500)
 
 
 setInterval(()=>{
@@ -33,7 +33,7 @@ setInterval(()=>{
     .catch(error => {
      console.log("err: " +error)
     }) 
-},2500)
+  },2500)
 
 
 setInterval(()=>{
@@ -48,12 +48,16 @@ setInterval(()=>{
     .catch(error => {
      console.log("err: " +error)
     }) 
-},2500)
+  },2500)
 
 
  setInterval(()=>{
 
-   let path = `https://api.telegram.org/bot6775787608:AAF2d7l05TtGQTXL12dTyhPyKjFqr9fuIvc/sendMessage\?chat_id\=-1002136043768\&text\= قیمت بیتکوین : ${BTC_price} , قیمت ترون : ${TRX_price} , قیمت اتریوم : ${ETH_price} `
+  let text = `قیمت بیتکوین : ${BTC_price}  
+                                                                                              قیمت ترون : ${TRX_price}     
+                                                                                                قیمت اتریوم : ${ETH_price}`  
+ 
+   let path = `https://api.telegram.org/bot6775787608:AAF2d7l05TtGQTXL12dTyhPyKjFqr9fuIvc/sendMessage\?chat_id\=-1002136043768\&text\= ${text}`
 
    axios.get(path)
      .then( function(response) {
@@ -61,7 +65,7 @@ setInterval(()=>{
      .catch(error => {
       console.log("err: " +error)
      })
- },5000)
+ },6000)
 
 
 

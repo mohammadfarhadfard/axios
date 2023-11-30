@@ -61,7 +61,7 @@ setInterval(()=>{
      .catch(error => {
       console.log("err: " +error)
      })
- },20000)
+ },3000)
 
 
 
