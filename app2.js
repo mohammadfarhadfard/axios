@@ -3,334 +3,278 @@ const express = require('express')
 const app = express()
 app.use(express.json())
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT"
-  axios.get(kucoinApi)
+setInterval(()=>{
+
+  let kucoinApi_BTC="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT"
+  axios.get(kucoinApi_BTC)
     .then( function(response) {
          BTC_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ETH-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_ETH="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ETH-USDT"
+  axios.get(kucoinApi_ETH)
     .then( function(response) {
          ETH_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BNB-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_BNB="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BNB-USDT"
+  axios.get(kucoinApi_BNB)
     .then( function(response) {
          BNB_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    }) 
-  },2500)
+    })
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=XRP-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_XRP="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=XRP-USDT"
+  axios.get(kucoinApi_XRP)
     .then( function(response) {
          XRP_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    }) 
-  },2500)
+    })
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=SOL-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_SOL="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=SOL-USDT"
+  axios.get(kucoinApi_SOL)
     .then( function(response) {
          SOL_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=USDC-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_USDC="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=USDC-USDT"
+  axios.get(kucoinApi_USDC)
     .then( function(response) {
          USDC_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ADA-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_ADA="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ADA-USDT"
+  axios.get(kucoinApi_ADA)
     .then( function(response) {
          ADA_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    }) 
-  },2500)
+    })
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=DOGE-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_DOGE="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=DOGE-USDT"
+  axios.get(kucoinApi_DOGE)
     .then( function(response) {
          DOGE_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=TRX-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_TRX="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=TRX-USDT"
+  axios.get(kucoinApi_TRX)
     .then( function(response) {
          TRX_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=TON-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_TON="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=TON-USDT"
+  axios.get(kucoinApi_TON)
     .then( function(response) {
          TON_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=LINK-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_LINK="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=LINK-USDT"
+  axios.get(kucoinApi_LINK)
     .then( function(response) {
          LINK_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    }) 
-  },2500)
+    })
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=AVAX-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_AVAX="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=AVAX-USDT"
+  axios.get(kucoinApi_AVAX)
     .then( function(response) {
          AVAX_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=MATIC-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_MATIC="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=MATIC-USDT"
+  axios.get(kucoinApi_MATIC)
     .then( function(response) {
          MATIC_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
- let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=DOT-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_DOT="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=DOT-USDT"
+  axios.get(kucoinApi_DOT)
     .then( function(response) {
          DOT_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    }) 
-  },2500)
+    })
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=LTC-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_LTC="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=LTC-USDT"
+  axios.get(kucoinApi_LTC)
     .then( function(response) {
          LTC_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    }) 
-  },2500)
+    })
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=SHIB-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_SHIB="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=SHIB-USDT"
+  axios.get(kucoinApi_SHIB)
     .then( function(response) {
          SHIB_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BCH-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_BCH="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BCH-USDT"
+  axios.get(kucoinApi_BCH)
     .then( function(response) {
          BCH_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
     }) 
-  },2500)
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=UNI-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_UNI="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=UNI-USDT"
+  axios.get(kucoinApi_UNI)
     .then( function(response) {
          UNI_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    })
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ATOM-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_ATOM="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ATOM-USDT"
+  axios.get(kucoinApi_ATOM)
     .then( function(response) {
          ATOM_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    }) 
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=XLM-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_XLM="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=XLM-USDT"
+  axios.get(kucoinApi_XLM)
     .then( function(response) {
          XLM_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    }) 
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=XMR-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_XMR="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=XMR-USDT"
+  axios.get(kucoinApi_XMR)
     .then( function(response) {
          XMR_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    })
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=KAS-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_KAS="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=KAS-USDT"
+  axios.get(kucoinApi_KAS)
     .then( function(response) {
          KAS_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    })
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ETC-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_ETC="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ETC-USDT"
+  axios.get(kucoinApi_ETC)
     .then( function(response) {
          ETC_price = response.data.data.price
     })
-    .catch(error => {
+    .catch(error => { 
      console.log("err: " +error)
-    })  
-  },2500)
+    }) 
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=RUNE-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_RUNE="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=RUNE-USDT"
+  axios.get(kucoinApi_RUNE)
     .then( function(response) {
          RUNE_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    }) 
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ICP-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_ICP="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=ICP-USDT"
+  axios.get(kucoinApi_ICP)
     .then( function(response) {
          ICP_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    }) 
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=LDO-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_LDO="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=LDO-USDT"
+  axios.get(kucoinApi_LDO)
     .then( function(response) {
          LDO_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    }) 
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=FIL-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_FIL="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=FIL-USDT"
+  axios.get(kucoinApi_FIL)
     .then( function(response) {
          FIL_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    })
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=HBAR-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_HBAR="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=HBAR-USDT"
+  axios.get(kucoinApi_HBAR)
     .then( function(response) {
          HBAR_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    }) 
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=APT-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_APT="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=APT-USDT"
+  axios.get(kucoinApi_APT)
     .then( function(response) {
          APT_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
-  },2500)
+    }) 
 
-  setInterval(()=>{
-   let kucoinApi="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=NEAR-USDT"
-  axios.get(kucoinApi)
+    let kucoinApi_NEAR="https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=NEAR-USDT"
+  axios.get(kucoinApi_NEAR)
     .then( function(response) {
          NEAR_price = response.data.data.price
     })
     .catch(error => {
      console.log("err: " +error)
-    })  
+    }) 
+
   },2500)
 
 
@@ -346,18 +290,4 @@ app.use(express.json())
      .catch(error => {
       console.log("err: " +error)
      })
- },60 * 1000)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ },6 * 1000)
