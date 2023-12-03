@@ -1,6 +1,8 @@
 const axios = require('axios')
 const express = require('express')
 const app = express()
+require('dotenv').config()
+let TOKEN = process.env.BOT_TOKEN
 app.use(express.json())
 
 setInterval(()=>{
@@ -295,7 +297,7 @@ setInterval(()=>{
 
   let text =  `%0D%0A%0D%0A[BTC-USDT]%0D%0A%0D%0A▪  بیتکوین  : ${BTC_price}%0D%0A%0D%0A[ETH-USDT]%0D%0A%0D%0A▪  اتریوم : ${ETH_price}%0D%0A%0D%0A[BNB-USDT]%0D%0A%0D%0A▪  بایننس : ${BNB_price}%0D%0A%0D%0A[XRP-USDT]%0D%0A%0D%0A▪ ریپل : ${XRP_price}%0D%0A%0D%0A[SOL-USDT]%0D%0A%0D%0A▪  سولانا : ${SOL_price}%0D%0A%0D%0A[USDC-USDT]%0D%0A%0D%0A▪  یو اس دی سی : ${USDC_price}%0D%0A%0D%0A[ADA-USDT]%0D%0A%0D%0A▪ کاردانو : ${ADA_price}%0D%0A%0D%0A[DOGE-USDT]%0D%0A%0D%0A▪ دوج کوین : ${DOGE_price}%0D%0A%0D%0A[TRX-USDT]%0D%0A%0D%0A▪ ترون : ${TRX_price}%0D%0A%0D%0A[TON-USDT]%0D%0A%0D%0A▪ تن کوین : ${TON_price}%0D%0A%0D%0A[LINK-USDT]%0D%0A%0D%0A▪ چین لینک : ${LINK_price}%0D%0A%0D%0A[AVAX-USDT]%0D%0A%0D%0A▪ آوالانچ : ${AVAX_price}%0D%0A%0D%0A[MATIC-USDT]%0D%0A%0D%0A▪ پالیگان(متیک) : ${MATIC_price}%0D%0A%0D%0A[DOT-USDT]%0D%0A%0D%0A▪ پولکادات : ${DOT_price}%0D%0A%0D%0A[LTC-USDT]%0D%0A%0D%0A▪ لایت کوین : ${LTC_price}%0D%0A%0D%0A[SHIB-USDT]%0D%0A%0D%0A▪ شیبا اینو : ${SHIB_price}%0D%0A%0D%0A[BCH-USDT]%0D%0A%0D%0A▪ بیت کوین کش : ${BCH_price}%0D%0A%0D%0A[UNI-USDT]%0D%0A%0D%0A▪ یونی سواپ : ${UNI_price}%0D%0A%0D%0A[ATOM-USDT]%0D%0A%0D%0A▪ کازماس : ${ATOM_price}%0D%0A%0D%0A[XLM-USDT]%0D%0A%0D%0A▪ استلار : ${XLM_price}%0D%0A%0D%0A[XMR-USDT]%0D%0A%0D%0A▪ مونرو : ${XMR_price}%0D%0A%0D%0A[KAS-USDT]%0D%0A%0D%0A▪ کسپا : ${KAS_price}%0D%0A%0D%0A[ETC-USDT]%0D%0A%0D%0A▪ اتریوم کلاسیک : ${ETC_price}%0D%0A%0D%0A[RUNE-USDT]%0D%0A%0D%0A▪ ثورچین : ${RUNE_price}%0D%0A%0D%0A[ICP-USDT]%0D%0A%0D%0A▪ اینترنت کامپیوتر : ${ICP_price}%0D%0A%0D%0A[LDO-USDT]%0D%0A%0D%0A▪ لیدو داو : ${LDO_price}%0D%0A%0D%0A[FIL-USDT]%0D%0A%0D%0A▪ فایل کوین : ${FIL_price}%0D%0A%0D%0A[HBAR-USDT]%0D%0A%0D%0A▪ هدرا هشگراف : ${HBAR_price}%0D%0A%0D%0A[APT-USDT]%0D%0A%0D%0A▪ اپتوس : ${APT_price}%0D%0A%0D%0A[NEAR-USDT]%0D%0A%0D%0A▪ نیر پروتکل : ${NEAR_price}`
  
-   let path = `https://api.telegram.org/bot6775787608:AAF2d7l05TtGQTXL12dTyhPyKjFqr9fuIvc/sendMessage\?chat_id\=-1002136043768\&text\= ${text}`
+   let path = `https://api.telegram.org/bot${TOKEN}/sendMessage\?chat_id\=-1002136043768\&text\= ${text}`
 
    axios.get(path)
      .then( function(response) {
@@ -311,7 +313,7 @@ setInterval(()=>{
     let text = `%0D%0A%0D%0A[USDT-IRT]%0D%0A%0D%0A▪  تتر  : ${USDT_price}`
 
 
-    let path = `https://api.telegram.org/bot6775787608:AAF2d7l05TtGQTXL12dTyhPyKjFqr9fuIvc/sendMessage\?chat_id\=-1002136043768\&text\= ${text}`
+    let path = `https://api.telegram.org/bot${TOKEN}/sendMessage\?chat_id\=-1002136043768\&text\= ${text}`
 
     axios.get(path)
      .then( function(response) {
