@@ -277,6 +277,19 @@ setInterval(()=>{
 
   },2500)
 
+  setInterval(() =>{
+
+    let nobitex='https://api.nobitex.ir/v2/orderbook/USDTIRT'
+
+      axios.get(nobitex)
+      .then( function(response) {
+         USDT_price = response.data.lastTradePrice
+       })
+      .catch(error => {
+      console.log("err: " +error)
+      })
+  } , 2500)
+
 
   setInterval(()=>{
 
@@ -290,4 +303,20 @@ setInterval(()=>{
      .catch(error => {
       console.log("err: " +error)
      })
- },6 * 1000)
+ },120 * 1000)
+
+
+  setInterval(() => {
+
+    let text = `%0D%0A%0D%0A[USDT-IRT]%0D%0A%0D%0A▪  تتر  : ${USDT_price}`
+
+
+    let path = `https://api.telegram.org/bot6775787608:AAF2d7l05TtGQTXL12dTyhPyKjFqr9fuIvc/sendMessage\?chat_id\=-1002136043768\&text\= ${text}`
+
+    axios.get(path)
+     .then( function(response) {
+     })
+     .catch(error => {
+      console.log("err: " +error)
+     })
+  }, 120 * 1000);
