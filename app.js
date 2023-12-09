@@ -348,7 +348,7 @@ app.use(express.json())
      .catch(error => {
       console.log("err: " +error)
      })
- },60 * 1000)
+ },120 * 1000)
 
 
 
