@@ -1,6 +1,6 @@
-const axios = require('axios')
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const axios = require('axios');
 require('dotenv').config()
 let TOKEN = process.env.BOT_TOKEN
 app.use(express.json())
