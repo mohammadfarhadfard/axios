@@ -10,7 +10,7 @@ const moment = require('jalali-moment');
 const date = moment().locale('fa').format('YYYY/M/D hh:mm');
 
 //get prices
-const coins = ["BTC","ETH","XRP","AVAX","TRX","LTC","SOL","BNB","ADA"]
+const coins = ["BTC","ETH","XRP","TRX","LTC","SOL","TON","SHIB"]
 const prices = []
 
 coins.forEach((coin)=>{
