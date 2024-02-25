@@ -9,8 +9,7 @@
 
 #### Dependencies:
 
-- express : 4.18.2
 - axios : 1.6.2
 - dotenv : 16.3.1
 
-about [express](https://expressjs.com/) and [axios](https://axios-http.com/)
+about [axios](https://axios-http.com/)
