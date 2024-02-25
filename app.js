@@ -1,18 +1,16 @@
-const express = require('express');
-const app = express();
 const axios = require('axios');
 require('dotenv').config()
 let TOKEN = process.env.BOT_TOKEN
-app.use(express.json())
+
 
 //date
 const moment = require('jalali-moment');
 const date = moment().locale('fa').format('YYYY/M/D hh:mm');
 
-//get prices
+
+//get crypto prices
 const coins = ["BTC","ETH","XRP","TRX","LTC","SOL","TON","SHIB","USDC"]
 const prices = []
-
 coins.forEach((coin)=>{
   setInterval(()=>{
     let kucoinApi = `https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=${coin}-USDT`
@@ -26,9 +24,9 @@ coins.forEach((coin)=>{
   },2500)
 })
 
+
 //get tether price
 setInterval(() =>{
-
       let nobitex='https://api.nobitex.ir/v2/orderbook/USDTIRT'
         axios.get(nobitex)
         .then( function(response) {
@@ -37,26 +35,22 @@ setInterval(() =>{
         .catch(error => {
         console.log("err: " +error)
         })
-    } , 2500)
+} , 2500)
 
-
-//send to telegram
+hr = `ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ`
+//crypto sending to telegram
 setInterval(()=> {
   msg = `قیمت ارز های دیجیتال : %0D%0A%0D%0A %0D%0A%0D%0A ◽️ USDT-IRT : ${global.USDT_price} %0D%0A%0D%0A %0D%0A%0D%0A`
-
   Object.entries(prices).sort().forEach(entry => {
      const [key,value] = entry;
     msg += `▪ ${key}-USDT : ${value} %0D%0A%0D%0A`
   })
-
   msg += ` %0D%0A%0D%0A 🗓 ${date}`
-
   let path = `https://api.telegram.org/bot${TOKEN}/sendMessage\?chat_id\=-1002136043768\&text\=${msg}`
-
      axios.get(path)
        .then( function(response) {
        })
        .catch(error => {
         console.log("err: " +error)
        })
-},300 * 1000)
+},6* 1000)
