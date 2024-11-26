@@ -73,7 +73,8 @@ function fetchCurrencyPrices(key) {
     .then(response => {
       const { p, h, l, d, dp, dt, t } = response.data;
       if (key === 'price_dollar_rl') {
-        global.dollar = p; global.dollar_max = h; global.dollar_min = l; global.dollar_swing = d; global.dollar_Percent = dp; global.dollar_dt = dt; global.dollar_s = t;
+        global.dollar = p; global.dollar_max = h; global.dollar_min = l; global.dollar_swing = d;
+        global.dollar_Percent = dp; global.dollar_dt = dt; global.dollar_s = t;
       } else if (key === 'price_gbp') {
         global.gbp = p; global.gbp_max = h; global.gbp_min = l; global.gbp_swing = d; global.gbp_Percent = dp; global.gbp_dt = dt; global.gbp_s = t;
       } else if (key === 'price_eur') {
@@ -93,7 +94,8 @@ setInterval(() => {
 //sending to telegram
 hr = `ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ`
 function createPriceMessage(coinName, currentPrice, maxPrice, minPrice, lastUpdate) {
-  return `◽️ ${coinName} : %0D%0A ▪ قیمت کنونی : ${currentPrice}%0D%0A ▪ بیشترین قیمت : ${maxPrice}%0D%0A ▪ کمترین قیمت : ${minPrice}%0D%0A ▪ زمان ثبت آخرین نرخ : ${lastUpdate}%0D%0A`;
+  return `◽️ ${coinName} : %0D%0A ▪ قیمت کنونی : ${currentPrice}%0D%0A ▪ بیشترین قیمت : ${maxPrice}%0D%0A ▪ 
+  کمترین قیمت : ${minPrice}%0D%0A ▪ زمان ثبت آخرین نرخ : ${lastUpdate}%0D%0A`;
 }
 
 const coinOrder = ["BTC", "ETH", "SOL", "BNB", "XRP", "DOGE", "USDC", "ADA", "TRX", "AVAX", "SHIB", "TON"];
