@@ -76,9 +76,11 @@ function fetchCurrencyPrices(key) {
         global.dollar = p; global.dollar_max = h; global.dollar_min = l; global.dollar_swing = d;
         global.dollar_Percent = dp; global.dollar_dt = dt; global.dollar_s = t;
       } else if (key === 'price_gbp') {
-        global.gbp = p; global.gbp_max = h; global.gbp_min = l; global.gbp_swing = d; global.gbp_Percent = dp; global.gbp_dt = dt; global.gbp_s = t;
+        global.gbp = p; global.gbp_max = h; global.gbp_min = l; global.gbp_swing = d;
+        global.gbp_Percent = dp; global.gbp_dt = dt; global.gbp_s = t;
       } else if (key === 'price_eur') {
-        global.eur = p; global.eur_max = h; global.eur_min = l; global.eur_swing = d; global.eur_Percent = dp; global.eur_dt = dt; global.eur_s = t;
+        global.eur = p; global.eur_max = h; global.eur_min = l; global.eur_swing = d; global.eur_Percent = dp;
+        global.eur_dt = dt; global.eur_s = t;
       }
     })
     .catch(error => {
