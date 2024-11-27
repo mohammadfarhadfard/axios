@@ -93,7 +93,7 @@ setInterval(() => {
   allKeys.forEach(fetchCurrencyPrices);
 }, 3 * 1000);
 
-// get oil prices
+//get oil prices
 const oilKeys = ['oil_opec', 'oil_brent', 'oil'];
 oilKeys.forEach((key) => {
   setInterval(() => {
@@ -114,7 +114,7 @@ function createPriceMessage(coinName, currentPrice, maxPrice, minPrice) {
   return `◽️ ${coinName} : %0D%0A ▪ قیمت کنونی : ${currentPrice}%0D%0A ▪ بیشترین قیمت : ${maxPrice}%0D%0A ▪ کمترین قیمت : ${minPrice}%0D%0A`;
 }
 
-// Function to create oil price message
+//function to create oil price message
 function createOilPriceMessage(oilName, currentPrice) {
   return `◽️ ${oilName} : ${currentPrice}%0D%0A`;
 }
